@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Carroussel -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <!--  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Font waesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <!--  -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <!-- meu CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+      <!-- TOP NAV, CONTACTO E SOCIAL -->
+    <div class="top-nav" id="home">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <p> <i class='fas fa-envelope'></i> contacto@evolution.com</p>
+                    <p> <i class='fa-brands fa-whatsapp'></i> (+244) 937 123 602 </p>
+                </div>
+                <div class="col-auto social-icons">
+                    <a href="#"><i class='fa-brands fa-facebook-f' ></i></a>
+                    <a href="#"><i class='fa-brands fa-twitter'></i></a>
+                    <a href="#"><i class='fa-brands fa-instagram'></i></a>
+                    <a href="#"><i class='fa-brands fa-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- NAV, MENU PRINCIPAL -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home.home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" alt=""/><span class="dot">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home.home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home.sobre') }}">Quem somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Projectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Procura/Oferta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Networking</a>
+                    </li>
+                </ul>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand ms-lg-3">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Corpo da página -->
+    {% block body %}
+
+    {% endblock %}
+
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
+

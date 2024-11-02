@@ -1,82 +1,14 @@
-<!doctype html>
-<html lang="pt">
+{% extends "base.html" %}
 
-<head>
-    <!-- meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Head-->
+{% block head %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
+<title>Home</title>
 
-    <title>Evolution</title>
-</head>
+{% endblock %}
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
-
-
-    <!-- TOP NAV, CONTACTO E SOCIAL -->
-    <div class="top-nav" id="home">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <p> <i class='fas fa-envelope'></i> contacto@evolution.com</p>
-                    <p> <i class='fa-brands fa-whatsapp'></i> (+244) 937 123 602 </p>
-                </div>
-                <div class="col-auto social-icons">
-                    <a href="#"><i class='fa-brands fa-facebook-f' ></i></a>
-                    <a href="#"><i class='fa-brands fa-twitter'></i></a>
-                    <a href="#"><i class='fa-brands fa-instagram'></i></a>
-                    <a href="#"><i class='fa-brands fa-youtube'></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- NAV, MENU PRINCIPAL -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="30" height="30" alt=""/><span class="dot">.</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quemSomos.html">Quem somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projectos.html">Projectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="noticias.html">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="biblioteca.html">biblioteca</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#reviews">Procura/Oferta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Networking</a>
-                    </li>
-                </ul>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-brand ms-lg-3">Contacto</a>
-            </div>
-        </div>
-    </nav>
+<!--Conteudo da tag <body>-->
+{% block body %}
 
     <!-- SLIDER -->
     <div class="owl-carousel owl-theme hero-slider">
@@ -120,7 +52,7 @@
 
                         <div class="col-12">
                             <div class="info-box">
-                                <img src="img/icon6.png" alt="">
+                                <img src="{{ url_for('static', filename='img/icon6.png') }}" alt="">
                                 <div class="ms-4">
                                     <h5>Lorem ipsum</h5>
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -130,7 +62,7 @@
                         </div>
                         <div class="col-12 mt-4">
                             <div class="info-box">
-                                <img src="img/icon4.png" alt="">
+                                <img src="{{ url_for('static', filename='img/icon4.png') }}" alt="">
                                 <div class="ms-4">
                                     <h5>Lorem ipsum dolor</h5>
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -140,7 +72,7 @@
                         </div>
                         <div class="col-12 mt-4">
                             <div class="info-box">
-                                <img src="img/icon5.png" alt="">
+                                <img src="{{ url_for('static', filename='img/icon5.png') }}" alt="">
                                 <div class="ms-4">
                                     <h5>Lorem ipsum dolor</h5>
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -151,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="img/about.png" alt="">
+                    <img src="{{ url_for('static', filename='img/about.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -201,7 +133,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}" alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -211,7 +143,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}" alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -221,7 +153,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}" alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -231,7 +163,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}" alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -241,7 +173,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}"alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -251,7 +183,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="service">
-                        <img src="img/icon_Fazemos.png" alt="">
+                        <img src="{{ url_for('static', filename='img/icon_Fazemos.png') }}" alt="">
                         <h5>Lorem ipsum dolor</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -282,7 +214,7 @@
         <div id="projects-slider" class="owl-theme owl-carousel">
             <div class="project">
                 <div class="overlay"></div>
-                <img src="img/projecto1.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/projecto1.jpg') }}" alt="">
                 <div class="content">
                     <h2>Lorem ipsum</h2>
                     <h6>Lorem ipsum dolor</h6>
@@ -290,7 +222,7 @@
             </div>
             <div class="project">
                 <div class="overlay"></div>
-                <img src="img/projecto2.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/projecto2.jpg') }}" alt="">
                 <div class="content">
                     <h2>Lorem ipsum</h2>
                     <h6>Lorem ipsum dolor</h6>
@@ -298,7 +230,7 @@
             </div>
             <div class="project">
                 <div class="overlay"></div>
-                <img src="img/projecto3.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/projecto3.jpg') }}" alt="">
                 <div class="content">
                     <h2>Lorem ipsum</h2>
                     <h6>Lorem ipsum dolor</h6>
@@ -306,7 +238,7 @@
             </div>
             <div class="project">
                 <div class="overlay"></div>
-                <img src="img/projecto4.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/projecto4.jpg') }}" alt="">
                 <div class="content">
                     <h2>Lorem ipsum</h2>
                     <h6>Lorem ipsum dolor</h6>
@@ -314,7 +246,7 @@
             </div>
             <div class="project">
                 <div class="overlay"></div>
-                <img src="img/projecto5.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/projecto5.jpg') }}" alt="">
                 <div class="content">
                     <h2>Lorem ipsum</h2>
                     <h6>Lorem ipsum dolor</h6>
@@ -401,7 +333,7 @@
         <div class="owl-theme owl-carousel reviews-slider container">
             <div class="review">
                 <div class="person">
-                    <img src="img/testemunho1.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/testemunho1.jpg') }}" alt="">
                     <h5>Lorem ipsum</h5>
                     <small>Lorem ipsum doLorem</small>
                 </div>
@@ -409,17 +341,17 @@
                     ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
                     enim nam exercitationem optio ducimus!</h3>
                 <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class="bx bxs-star-half"></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class="fas fa-star-half"></i>
                 </div>
                 <i class='bx bxs-quote-alt-left'></i>
             </div>
             <div class="review">
                 <div class="person">
-                    <img src="img/testemunho2.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/testemunho2.jpg') }}" alt="">
                     <h5>Lorem ipsum doLorem</h5>
                     <small>Lorem ipsum doLorem</small>
                 </div>
@@ -427,17 +359,17 @@
                     ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
                     enim nam exercitationem optio ducimus!</h3>
                 <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class="bx bxs-star-half"></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class="fas fa-star-half"></i>
                 </div>
                 <i class='bx bxs-quote-alt-left'></i>
             </div>
             <div class="review">
                 <div class="person">
-                    <img src="img/testemunho3.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/testemunho3.jpg') }}" alt="">
                     <h5>Lorem ipsum doLorem</h5>
                     <small>Lorem ipsum doLorem</small>
                 </div>
@@ -445,13 +377,13 @@
                     ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
                     enim nam exercitationem optio ducimus!</h3>
                 <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class="bx bxs-star-half"></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class='fas fa-star'></i>
+                    <i class="fas fa-star-half"></i>
                 </div>
-                <i class='bx bxs-quote-alt-left'></i>
+                <i class='fas fa-quote-alt-left'></i>
             </div>
         </div>
     </section>
@@ -476,7 +408,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <article class="blog-post">
-                        <img src="img/projecto1.jpg" alt="">
+                        <img src="{{ url_for('static', filename='img/projecto1.jpg') }}"  alt="">
                         <a href="#" class="tag">Evento</a>
                         <div class="content">
                             <small>01 de Setembro 2022</small>
@@ -490,7 +422,7 @@
                 </div>
                 <div class="col-md-4">
                     <article class="blog-post">
-                        <img src="img/projecto2.jpg" alt="">
+                        <img src="{{ url_for('static', filename='img/projecto2.jpg') }}" alt="">
                         <a href="#" class="tag">Evento</a>
                         <div class="content">
                             <small>01 de Setembro 2022</small>
@@ -504,7 +436,7 @@
                 </div>
                 <div class="col-md-4">
                     <article class="blog-post">
-                        <img src="img/projecto3.jpg" alt="">
+                        <img src="{{ url_for('static', filename='img/projecto3.jpg') }}" alt="">
                         <a href="#" class="tag">Categoria/Tipo</a>
                         <div class="content">
                             <small>01 de Setembro 2022</small>
@@ -521,104 +453,17 @@
     </section>
 
     
-    <!-- RODAPE -->
-    <footer>
-        <div class="footer-top text-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h4 class="navbar-brand">Evolution<span class="dot">.</span></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Exercitationem incidunt sunt molestiae!</p>
-                        <div class="col-auto social-icons">
-                            <a href="#"><i class='fa-brands fa-facebook-f'></i></a>
-                            <a href="#"><i class='fa-brands fa-twitter'></i></a>
-                            <a href="#"><i class='fa-brands fa-instagram'></i></a>
-                            <a href="#"><i class='fa-brands fa-youtube'></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p class="mb-0">Copyright@2024. Todos os direitos reservados</p>
-        </div>
-    </footer>
-
+    
+    <!-- Rodape -->
+    {% include 'rodape.html' %}
 
     <!-- CONTACTO -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <div class="container-fluid">
-                        <div class="row gy-4">
-                            <div class="col-lg-4 col-sm-12 bg-cover"
-                                style="background-image: url(img/contacto.jpg); min-height:300px;">
-                                <div class="">
-                                    <!-- 
-                                    <ul class="list-inline">
-                                        <li>contacto@evolution.com</li>
-                                        <li>contacto@evolution.com</li>
-                                        <li>(+244) 937 123 602</li>
-                                        <li>(+244) 937 123 602</li>
-                                        <li>(+244) 937 123 602</li>
-                                    </ul>
-                                    
-                                    -->
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <form class="p-lg-5 col-12 row g-3">
-                                    <div>
-                                        <h1>Entre em contacto</h1>
-                                    <p>Sinta-se a vontade para entrar em contacto, responderemos o mais rapido possivel</p>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label for="userName" class="form-label">Nome</label>
-                                        <input type="text" class="form-control" placeholder="Insira o seu nome" id="userName"
-                                            aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label for="userName" class="form-label">Sobrenome</label>
-                                        <input type="text" class="form-control" placeholder="Insira o seu sobrenome" id="userName"
-                                            aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="userName" class="form-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="paulo@exemplo.com" id="userName"
-                                            aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="exampleInputEmail1" class="form-label">Escreva a sua mensagem</label>
-                                        <textarea name="a" placeholder="..." class="form-control" id="a"  rows="4"></textarea>
-                                    </div>
+    {% include 'contacto.html' %}
+    
+{% endblock %}
 
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-brand">Enviar Mensagem</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--Arquivos Javascript-->
+{% block scriptJS %}
 
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/app.js"></script>
-</body>
-
-</html>
+{% endblock %}
+    
